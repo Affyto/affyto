@@ -1,7 +1,7 @@
 async function fetchListings() {
-    const response = await fetch("https://api.airtable.com/v0/YOUR_BASE_ID/Listings", {
+    const response = await fetch("https://api.airtable.com/v0/appsIFCfmbYiGKRzb/Listings", {
         headers: {
-            "Authorization": "Bearer YOUR_PERSONAL_ACCESS_TOKEN"
+            "Authorization": "pate6rGxWkTSWdCKr.bd414c22ef6b09af25a90317ad45bc8c34395a33c3a4b63b74e2bcf652b126df"
         }
     });
 
