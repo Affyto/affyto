@@ -1,14 +1,25 @@
+const AT_PAT = import.meta.env.AT_PAT;
+const AT_LISTING_BASE = import.meta.env.AT_LISTING_BASE;
+const AT_EMAIL_BASE = import.meta.env.AT_EMAIL_BASE;
+
 document.getElementById("subscribe-form").addEventListener("submit", async function(event) {
     event.preventDefault();
-    
-    const email = document.getElementById("email").value;
-    const AIRTABLE_PAT = import.meta.env.AIRTABLE_PAT;
-    const AIRTABLE_BASE_ID = import.meta.env.AIRTABLE_BASE_ID;
 
-    const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Subscribers`, {
+    const email = document.getElementById("email").value.trim();
+    
+    if (!email) {
+        alert("Please enter a valid email.");
+        return;
+    }
+
+    const AIRTABLE_PAT = "your_airtable_personal_access_token";  // Replace this with your actual Airtable PAT
+    const AIRTABLE_BASE_ID = "your_airtable_base_id";  // Replace this with your actual Airtable Base ID
+    const AIRTABLE_TABLE_NAME = "Subscribers";  // Make sure this matches your table name in Airtable
+
+    const response = await fetch(`https://api.airtable.com/v0/${AT_EMAIL_BASE}/Emails`, {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${AIRTABLE_PAT}`,
+            "Authorization": `Bearer ${AT_PAT}`,
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -27,11 +38,12 @@ document.getElementById("subscribe-form").addEventListener("submit", async funct
 });
 
 
+
 /*
 async function fetchListings() {
-    const response = await fetch("https://api.airtable.com/v0/appsIFCfmbYiGKRzb/Listings", {
+    const response = await fetch(f"https://api.airtable.com/v0/{AT_BASE}/Listings", {
         headers: {
-            "Authorization": "pate6rGxWkTSWdCKr.bd414c22ef6b09af25a90317ad45bc8c34395a33c3a4b63b74e2bcf652b126df"
+            "Authorization": "AT_PAT"
         }
     });
 

@@ -43,13 +43,17 @@ body {
     z-index: 10;
 }
 
-/* Main Title */
-.title {
-    font-size: 172px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    color: white;
+.logo-container {
+    text-align: center;
+    margin-top: 50px;
 }
+
+.logo {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    max-width: 100%;
+}
+
 
 /* Subtitle */
 .subtitle {
