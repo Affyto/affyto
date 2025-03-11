@@ -51,10 +51,10 @@ body {
 }
 
 .logo {
-    width: 200px;  /* Adjust width (try 150px if still too big) */
+    width: 300px;  /* Adjust width (try 150px if still too big) */
     height: auto;  /* Maintain aspect ratio */
     max-width: 80%; /* Prevents it from going too big on large screens */
-    max-height: 150px; /* Adjust this to fit within the screen */
+    max-height: 200px; /* Adjust this to fit within the screen */
     display: block;
     margin: 0 auto;
     object-fit: contain; /* Ensures the image doesn't stretch */
