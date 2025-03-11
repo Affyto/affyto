@@ -45,13 +45,19 @@ body {
 
 .logo-container {
     text-align: center;
-    margin-top: 50px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .logo {
-    width: 50x; /* Adjust as needed */
-    height: auto;
-    max-width: 100%;
+    width: 200px;  /* Adjust width (try 150px if still too big) */
+    height: auto;  /* Maintain aspect ratio */
+    max-width: 80%; /* Prevents it from going too big on large screens */
+    max-height: 150px; /* Adjust this to fit within the screen */
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* Ensures the image doesn't stretch */
 }
 
 
